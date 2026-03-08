@@ -17,7 +17,7 @@ public class CorsConfig {
         CorsConfiguration config = new CorsConfiguration();
 
         // ✅ Frontend URL (React Vite default)
-        config.setAllowedOrigins(List.of("http://localhost:5173"));
+        config.setAllowedOrigins(List.of("*"));
 
         // ✅ Allowed HTTP methods
         config.setAllowedMethods(List.of(
@@ -31,6 +31,7 @@ public class CorsConfig {
 
         // ✅ Allowed Headers
         config.setAllowedHeaders(List.of("*"));
+
 
         // ✅ Allow JWT Authorization header
         config.setAllowCredentials(true);
