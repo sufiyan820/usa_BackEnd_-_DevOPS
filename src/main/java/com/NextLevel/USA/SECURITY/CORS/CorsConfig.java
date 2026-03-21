@@ -30,7 +30,7 @@ public class CorsConfig {
         ));
 
         // ✅ Allowed Headers
-        config.setAllowedHeaders(List.of("http://13.60.84.8"));
+        config.setAllowedHeaders(List.of("http://51.20.42.48"));
 
 
         // ✅ Allow JWT Authorization header
