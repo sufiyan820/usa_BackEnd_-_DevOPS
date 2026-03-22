@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.math.BigDecimal;
-
+import java.util.List;
 
 
 @Entity
@@ -41,6 +41,10 @@ public class Products {
 
     @Column(nullable = false)
     private boolean available = true;
+
+
+    @OneToMany(mappedBy = "products", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ProdctImages> images;
 
 
     // ✅ Required by JPA

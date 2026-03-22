@@ -33,6 +33,7 @@ public class ProductMapper {
         product.setCategory(dto.getCategory());
         product.setPrice(dto.getPrice());
         product.setStock(dto.getStock());
+        product.setManufacturer(dto.getManufacturer()); // ✅ important
 
         product.setAvailable(dto.getStock() > 0);
 

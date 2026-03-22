@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -19,7 +20,12 @@ import java.math.BigDecimal;
     private boolean available;
     private ProductStatus status;
     private String manufacturer;
+    private List<String> imageUrls;
 
+
+    public ProductResponseDTO(List<String> imageUrls) {
+        this.imageUrls = imageUrls;
+    }
 
     public ProductResponseDTO(Long id, String name, String description, BigDecimal price, String category, Integer stock, boolean available, ProductStatus status) {
         this.id = id;
